@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+   
+    <title>Book Adiction</title>
+    <style>
+        .sold1 {
+            margin-left: 1rem;
+            font-size: 0, 9rem;
+            color: #999;
+            text-decoration: line-through;
+        }
+        .desafficher {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!--navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">BOOK ADDICTION</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="shopingcart.html">shooping cart
+                        <span id="shopcartnbr"  class="badge badge-pill badge-primary">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--end navigation-->
+
+   
+    <div class="container">
+        <div class="row">
+            <!--./col-lg-3-->
+            <div class="col-lg-3">
+                <h1 class="my-4">categorie</h1>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active" onclick="filterBooks('all')">Tous les livres</a>
+                    <a href="#" class="list-group-item list-group-item-action" onclick="filterBooks('computing')">computing</a>
+                    <a href="#" class="list-group-item list-group-item-action" onclick="filterBooks('biography')">biography</a>
+                    <a href="#" class="list-group-item list-group-item-action" onclick="filterBooks('business')">business</a>
+                </div>
+            </div>
+            
+            <!--col-lg-9-->
+            <div class="col-lg-9">
+                <div class="row my-4">
+                    
+                    <div class="allBooks computing  col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a class="text-center" href="#">
+                                <img class="card-img-top" src="img/41YCFiM5ZAL._SX310_BO1,204,203,200_.jpg" alt="Card image cap">
+                            </a>
+
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="">twilight saga</a></h4>
+                                <h5>20$ <span class="sold1">50$</span></h5>
+                            </div>
+                            <div class="card-footer">
+                                <button  type="button"  data-toggle="modal" data-target="#exampleModal" onclick="addtocart('twilight saga')" class="btn btn-secondary text-white btn-block">add to cart</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="allBooks computing  col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a class="text-center" href="#">
+                                <img class="card-img-top" src="img/lord of the ring.jpg" alt="Card image cap">
+                            </a>
+
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="">lord of the ring</a></h4>
+                                <h5>60$ <span class="sold1">40$</span></h5>
+                            </div>
+                            <div class="card-footer">
+                                <a class="btn btn-secondary text-white btn-block" data-toggle="modal" data-target="#exampleModal"  onclick="addtocart('lord of the ring')"  href="#">add to cart</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="allBooks computing  col-lg-4 col-md-6 mb-4">
+                      <div class="card h-100">
+                          <a class="text-center" href="#">
+                              <img class="card-img-top" src="img/harry-potter.jpg" alt="Card image cap">
+                          </a>
+
+                          <div class="card-body">
+                              <h4 class="card-title"><a href="">harry-potter</a></h4>
+                              <h5>70$ <span class="sold1">50$</span></h5>
+                          </div>
+                          <div class="card-footer">
+                              <a class="btn btn-secondary text-white btn-block"  data-toggle="modal" data-target="#exampleModal"   onclick="addtocart('harry-potter')" href="#">add to cart</a>
+                          </div>
+                      </div>
+
+                  </div>
+
+                  <div class="allBooks biography  col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a class="text-center" href="#">
+                            <img class="card-img-top" src="img/marvel.jpg" alt="Card image cap">
+                        </a>
+
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="">legend marvel</a></h4>
+                            <h5>20$ <span class="sold1">50$</span></h5>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-secondary text-white btn-block"  data-toggle="modal" data-target="#exampleModal"  onclick="addtocart('legend marvel')" href="#">add to cart</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="allBooks biography  col-lg-4 col-md-6 mb-4">
+                  <div class="card h-100">
+                      <a class="text-center" href="#">
+                          <img class="card-img-top" src="img/One-piece.jpg" alt="Card image cap">
+                      </a>
+
+                      <div class="card-body">
+                          <h4 class="card-title"><a href="">one-piece</a></h4>
+                          <h5>20$ <span class="sold1">50$</span></h5>
+                      </div>
+                      <div class="card-footer">
+                          <a class="btn btn-secondary text-white btn-block" data-toggle="modal" data-target="#exampleModal"  onclick="addtocart('one-piece')" href="#">add to cart</a>
+                      </div>
+                  </div>
+
+              </div>
+
+              <div class="allBooks biography  col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <a class="text-center" href="#">
+                        <img class="card-img-top" src="img/zelda.jpg" alt="Card image cap">
+                    </a>
+
+                    <div class="card-body">
+                        <h4 class="card-title"><a href="">zelda</a></h4>
+                        <h5>20$ <span class="sold1">50$</span></h5>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary text-white btn-block" data-toggle="modal" data-target="#exampleModal"  onclick="addtocart('zelda')" href="#">add to cart</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="allBooks business  col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <a class="text-center" href="#">
+                        <img class="card-img-top" src="img/12 years.jpg" alt="Card image cap">
+                    </a>
+
+                    <div class="card-body">
+                        <h4 class="card-title"><a href="">12 years of slaves</a></h4>
+                        <h5>20$ <span class="sold1">50$</span></h5>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary text-white btn-block" data-toggle="modal" data-target="#exampleModal"  onclick="addtocart('12 years of slaves')" href="#">add to cart</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="allBooks business  col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <a class="text-center" href="#">
+                        <img class="card-img-top" src="img/les amants du ciel.jpg" alt="Card image cap">
+                    </a>
+
+                    <div class="card-body">
+                        <h4 class="card-title"><a href="">les amants du ciel</a></h4>
+                        <h5>20$ <span class="sold1">50$</span></h5>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary text-white btn-block" data-toggle="modal" data-target="#exampleModal"  onclick="addtocart('les amants du ciel')" href="#">add to cart</a>
+                    </div>
+                </div>
+
+            </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+  
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modal-body">
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+        <script src="controle.js"></script>
+</body>
+
+</html>

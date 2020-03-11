@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Shoping Cart</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">shoping cart</a>
+        </div>
+      </nav>
+
+    
+        <div class="col-md-3">
+            <h2>cart</h2>
+        </div>
+       
+        
+        <div class="container-fluid my-5">
+            <div class="row">
+                <div class="col-md-3">
+                    Nom
+                </div>
+                <div class="col-md-3">
+                    Quantité
+                </div>
+                <div class="col-md-3">
+                    Prix
+                </div>
+            </div>
+            <div class="row d-none mb-3" id="aucunproduit">
+                <div class="col alert alert-warning">
+                    Aucun produit trouver
+                </div>
+            </div>
+            <div class="row product mb-3" id="L1">
+                
+                <div class="col-md-3">
+                    Alchemiste
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-sm btn-secondary" onclick="updateQte('qteL1','remove','prixL1',25)">-</button>
+                    <span id="qteL1">1</span>
+                    <button class="btn btn-sm btn-secondary" onclick="updateQte('qteL1','add','prixL1',25)">+</button>
+                </div>
+                <div class="col-md-3">
+                    <span id="prixL1">25</span> $
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-sm btn-danger" onclick="removeFromCart('L1')">supprimer</button>
+                </div>
+            </div>
+
+            <div class="row product mb-3" id="L2">
+                
+                <div class="col-md-3">
+                    Alchemiste
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-sm btn-secondary" onclick="updateQte('qteL2','remove','prixL2',25)">-</button>
+                    <span id="qteL2">1</span>
+                    <button class="btn btn-sm btn-secondary" onclick="updateQte('qteL2','add','prixL2',25)">+</button>
+                </div>
+                <div class="col-md-3">
+                    <span id="prixL2">25</span> $
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-sm btn-danger" onclick="removeFromCart('L2')">supprimer</button>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+    <script src="shoppingcart.js"></script>
+</body>
+</html>
